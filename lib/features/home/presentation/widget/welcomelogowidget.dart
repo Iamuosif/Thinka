@@ -8,7 +8,11 @@ class WelcomeLogoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(Assets.logo, width: 70, height: 70),
+        Hero(
+          tag: 'thinkaLogo',
+          child: Image.asset(Assets.logo, height: 70, width: 70),
+        ),
+
         const SizedBox(width: 10),
         Expanded(
           child: Column(
